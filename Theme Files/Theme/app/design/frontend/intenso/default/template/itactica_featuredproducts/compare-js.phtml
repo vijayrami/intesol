@@ -1,0 +1,30 @@
+<?php
+/**
+ * Intenso Premium Theme
+ * 
+ * @category    Itactica
+ * @package     Itactica_FeaturedProducts
+ * @copyright   Copyright (c) 2014-2015 Itactica (http://www.itactica.com)
+ * @license     http://getintenso.com/license
+ */
+
+?>
+
+<?php 
+$_compare_collection = Mage::helper('catalog/product_compare')->getItemCollection();
+$compareProductsId = '';
+?>
+<?php if ($_compare_collection->getSize()): ?>
+    <?php foreach($_compare_collection as $product): ?>
+           <?php $compareProductsId .= $product->getId() . ','; ?>
+    <?php endforeach; ?>
+    <?php $compareProductsId = rtrim($compareProductsId, ','); ?>
+<script type="text/javascript">
+	jQuery(function() {
+	    var compareProducts = Array(0,<?php echo $compareProductsId; ?>);
+	    for (i = 0; i < compareProducts.length; i++) {
+	        if ($('compare-id-'+compareProducts[i]) != undefined) $('compare-id-'+compareProducts[i]).addClassName('compared');
+	    }
+	});
+</script>
+<?php endif; ?>

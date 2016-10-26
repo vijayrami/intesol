@@ -1,0 +1,195 @@
+Changes in version 1.5.0
+
+- New Product Labels functionality. Add unlimited product labels and configure any combination of rules to display custom labels in product page and/or category pages.
+- New config option to enable/disable social icons and newsletter sign up field on mobile.
+- New config option to disable menu links in the customer account menu.
+- New option to add brand logo on product page.
+- New option to display thumbnails of additional images in product page a a slider (instead of stacked)
+- New config option to select the event type that opens and closes the mega-menu (hover or click)
+- New config option to auto-dismiss notification message popups after x seconds.
+- New AJAX functionality to Layered Navigation inside Search Results page.
+- New option to change color of Quick View button.
+- Fixed CSS issue in quantity field of the checkout/cart/configure page.
+- Fixed bug in Featured Products widget when product source is “Specific Category”. Now second-level and third-level categories are correctly shown as tab names when “Show Category Tabs” is set to Yes.
+- Fixed aspect ratio bug in Featured Categories slider.
+- Fixed absolutely positioned elements on List mode in catalog. Now the description, price, add to cart button, ratings, etc are positioned relatively.
+- Fixed bug in catalog pages on mobile.
+- Several minor bug fixes
+
+Changes in version 1.4.2
+
+- Grid/List mode in Catalog Page is now available on mobile view.
+- New option to add custom menu links in the mobile off-canvas menu (System > Configuration > Theme Setup > Header)
+- Added optional store selector in header. Must be enabled in System > Configuration > Theme Setup > Header
+- New option to set a custom height for the product name, price and rating area located below the product picture. The new option is located in System > Configuration > Theme Setup > Catalog Page.
+- Compare icon is now highlighted on Featured Products when adding products to compare and cache is enabled.
+- Fixed padding issue on custom menu items when sticky menu is enabled.
+- Fixed CSS margin issue in Layered Navigation filters on large screens.
+- Fixed validation issue in State/Province field when using an alternate shipping direction.
+- Google Fonts url is now always served using SSL (former “protocol agnostic” url has been deprecated)
+- Fixed bug in max-width of secondary sticky nav in product page
+- Added referral parameter to login URL to allow redirecting to previous page after login (if configured on admin panel)
+- Other small bug fixes
+
+
+Changes in version 1.4.1
+
+- New options to hide price and Add to Cart button in Product page (System > Configuration > Theme Setup > Product page)
+- New Black&White filter for LogoSlider widget. Now logos can be B&W by default and transform to full color on mouseover.
+- New option in Featured Products widget to change display mode from slider to grid.
+- New option in Featured Categories widget to change display mode from slider to grid.
+- New option in featured Categories widget to add a custom classname.
+- New option in Layered Navigation to remember filter’s pane status (open/close) after a page refresh.
+- Renamed layout of Reset password page (from customer_account_resetpassword to customer_account_changeforgotten) for compatibility with SUPEE-6788 and Magento 1.9.2.2
+- Fixed sticky menu CSS style for boxed layout.
+- Fixed sticky menu CSS style when optional logo for sticky menu is not set.
+- Fixed bug in super attributes select boxes on product page when a product variation is not available. Now unavailable options are properly greyed out and disabled.
+- Fixed right block positioning in mega-menu when vertical menu is enabled.
+- Fixed JavaScript error in MAP popup when clicking “Click for price” link from Related and Up-sells sliders in product page.
+- Fixed missing table prefix in bestseller option for Feature Products widget.
+
+
+Changes in version 1.4.0
+
+- Compatibility with Magento 1.9.2.2
+- New sticky menu option for main menu. 
+- New static blocks in Layered Navigation pane. Now you can insert any content at the top and bottom of layered navigation.
+- New config option to disable ‘Add to Cart’ success message popup.
+- New config option to set product name length to 1-3 rows on Catalog page.
+- Added 'priceCurrency' rich snippet to product page.
+- Fixed 'out of stock' label style in list view
+- Fixed cart count in mobile footer for Magento 1.9.2.0 and up. Now the cart count is properly updated on mobile footer.
+- Fixed model rewrite for catalog page. Now the default model is used when Layered Navigation extension is disabled.
+- Fixed display bug with Featured Products Widget in "No Results" Search Page
+- FIxed bug with masonry layout in advanced search results page
+- Fixed 'Disable Quick View for Mobile' option. Now quick view button is hidden on touch screens below 640px.
+- Fixed labels animation in input forms on advanced search page and contact form.
+- Other small bugs fixed.
+
+
+Changes in version 1.3.5
+
+- Fixed compatibility of Quick View with Safari.
+- Prices of Configurable Products in QuickView are now updated properly when selecting an option with different price.
+- Layout updates from Customer section were moved from Local.xml to Customer.xml to improve support for third-party extensions that makes layout modifications to Customer Admin Panel.
+- Fixed Prototype.js error on Catalog View page when category is empty.
+- Fixed CSS styles for 3D Secure logos in checkout
+- Fixed memory leak in product page and quickview
+- Fixed bug in Add to Cart redirection observer of Quick View
+- "Add to Cart" button replaced by "View Details" for configurable product in Catalog List page
+- Fixed ExtendedReviews bug. Now reviews added from admin panel are properly shown in front-end
+- Fixed navigation arrows of full page zoom on iPad. Now arrows are visible all time when opening product zoom on iPad
+- Scrolling in off-canvas menus on iOS7-8 is now possible
+- Fixed isotope.js layout issue on orientation change. Now catalog page layout is properly updated on orientation change in mobile.
+- Echo.js (lazy loading) plugin updated from v1.6.0 to v1.7.0
+- jQuery updated from v2.1.0 to v2.1.4
+- Added HoverIntent.js plugin. Now main menu drop-downs and review¥s popover in catalog page are not opened by accident when moving the mouse around.
+- Added overlay to vertical menu and CSS styles improvements  
+- Added "Empty Cart" link to shopping cart page
+- Added "View Cart" button to confirmation message modal popup shown after adding product to cart
+
+
+Changes in version 1.3.4
+
+- Fixed bug in Quick View that prevented the popup to open in some installations.
+- Fixed Quick View issue in search results page and advanced search results page.
+- Fixed tiered pricing styles.
+- Fixed Masonry Layout option. Now height of images is adjusted automatically.
+- Fixed other small CSS issues.
+- Added option to set image height of product in Catalog View page.
+
+
+Changes in version 1.3.3
+
+- Fixed Check/Memo CSS style in checkout
+- Fixed logo CSS issue in checkout header
+- Fixed customer account sidebar z-index issue in IE9-IE11
+- 4th image in Billboard widget is now properly saved
+- Fixed Demo Notice CSS styles
+- Fixed State/Province field behavior on desktop and mobile
+- Fixed ACL permissions for Theme menu. Now you can properly control the access to the Theme menu.
+- Fixed Back button link on OPC Billing step when user is logged in. Now the button links to the shopping cart instead of reloading the same page.
+- Fixed Paypal Express review page
+- Added link to TextBoxes images
+- Added Continue Shopping and Proceed to Checkout buttons to add to cart confirmation pop-up
+- New option of form fields added. Now you can select between Material Design and classic style form fields.
+- New config option for vertical main menu
+- New config option to set max-width for logo on medium and large screens
+- New config option to set max-width for logo on mobile
+- New Quick View modal popup to preview product info from catalog pages
+
+
+Changes in version 1.3.2
+
+- Fixed State/Region field behaviour in checkout, shopping cart and customer dashboard.
+- "Estimate Shipping and Tax" box in Shopping Cart page now stays open after submitting the form.
+- Added posibility to add a logo for small screens (Logo Src Small)
+- Improved compatibility of Sprectrum color picker with third-party extensions.
+- New pop-up with exit-intent technology. 
+
+
+Changes in version 1.3.0
+
+- New Electronics demo.
+- New Furniture demo.
+- New extension Billboard to easily add 1-4 columns of images with links to any page.
+- New extension CallToAction to easily add CTAs to any page. 
+- Improved loading speed for Featured Products widget when cache is off.
+- New config options for Featured Products extension: Image Height, Padding Around Image, Enable Adaptive Resize of Image, Adaptive Resize Position
+- New design options added to configuration panel.
+- Added more style options to Sticky Menu Bar on product page.
+- Added option to change background color in Customer Account area and Login/register pages.
+- New config options for Catalog Page: Keep Image Aspect Ratio, Image Padding and Product Box Border Radius.
+- New config options for Product Page: Keep Image Aspect Ratio, Set Height for Images.
+- Fixed bug on Image Slider that prevented autoplay when using a link on the background image.
+- Fixed CSS issue in admin that prevented icon selector on Text Boxes to be properly styled when CSS merge option was active.
+- Fixed function on advanced reviews to avoid dulicated votes.
+- Fixed date validation issue on Date of Birth fields.
+- Fixed Featured Products best-seller sorting for Bundled products.
+- Fixed theme colorpicker compatibility issue when jscolor.js is used by third party extensions.
+- Other small bugs fixes and improvements.
+
+
+Changes in version 1.2.0:
+
+- General bug fixes and performance improvements
+- Added new extension to easily manage Text Boxes with icons and images
+- Added a new layout option to put the secondary menu of the header as a ribbon (instead of the drop-down menu located next to the search button)
+- Now all widgets are cached by default, improving page load time.
+- Add new design options to set font-color on transparent header.
+- Fixed z-index issue with Mega-Menu on IE11
+- Fixed main menu text color issue on hover (for mobile)
+- "Sign In" button on account drop-down now changes to "Log Out" when customer is logged in.
+- Fixed style issue on input text for custom options
+- Fixed shared wishlist page layout issue
+- Fixed demo import for multi-store installations
+- Font size of sliders now are adjusted automatically on medium screens (tablets)
+- Adjusted style of Language and Currency Switch on mobile
+- Fixed iPhone 6 scrolling issue with offcanvas menus
+- Fixed error on Theme Setup page when compilation mode is enabled
+- Custom.css file is now created automatically on first run to avoid overwrite it on upgrades
+
+
+Changes in version 1.1.0:
+
+- Fixed confirmation message after posting reviews.
+- Fixed Product Tag List page
+- Fixed bug in Schema markup (rich snipets)
+- Fixed bug in Account Menu link
+- Fixed bug in height of Image Slider on mobile devices
+- Fixed bug in Mega-Menu dropdown (not displaying on IE10)
+- New layout option for transparent header on home page
+- New option for full screen image slider
+- New design configuration options added to header and footer
+- New icons added (250+)
+- New option to easily add slides to Image Slider extension
+- Added option to show language and currency selector on mobile
+- Import process improved. Now you can select the demo store to be imported. New demo stores will be added shortly.
+
+
+Changes in version 1.0.2:
+
+- Fixed bug in Featured Products widget that prevented using the action links (add to cart, wishlist and compare) when cache was enabled.
+- Added compatibility with Magento 1.8.1.0
+
+

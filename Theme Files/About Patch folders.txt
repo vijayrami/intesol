@@ -1,0 +1,15 @@
+About Patch Files:
+
+Patch files were developed to provide compatibility with older versions of Magento.
+
+IMPORTANT
+---------
+Check your Magento version in the Admin panel (located at the footer of all pages) and ONLY apply the Patch folder that correspond to your version. 
+
+If you can’t find a Patch folder that match your version then your Magento version doesn’t require a patch (just copy the content inside “Theme” folder)
+
+Note: Last version of Magento will never require you to apply a Patch folder.
+
+For detailed information about the installation procedure please refer to this article:
+
+http://support.getintenso.com/support/solutions/articles/5000526846-installation

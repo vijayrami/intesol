@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Intenso Premium Theme
+ * 
+ * @category    Itactica
+ * @package     Itactica_ProductLabel
+ * @copyright   Copyright (c) 2014-2016 Itactica (https://www.getintenso.com)
+ * @license     https://getintenso.com/license
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <itactica_productlabel translate="title" module="itactica_productlabel">
+                                        <title>Intenso - Product Labels</title>
+                                    </itactica_productlabel>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <theme>
+                        <children>
+                            <itactica_productlabel translate="title" module="itactica_productlabel">
+                                <title>Product Labels</title>
+                                <children>
+                                    <productlabel translate="title" module="itactica_productlabel">
+                                        <title>Product Labels</title>
+                                        <sort_order>60</sort_order>
+                                    </productlabel>
+                                </children>
+                            </itactica_productlabel>
+                        </children>
+                    </theme>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <theme>
+            <children>
+                <itactica_productlabel translate="title" module="itactica_productlabel">
+                    <title>Product Labels</title>
+                    <action>adminhtml/productlabel_label</action>
+                    <sort_order>50</sort_order>
+                </itactica_productlabel>
+            </children>
+        </theme>
+    </menu>
+</config>

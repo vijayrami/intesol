@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Intenso Premium Theme
+ * 
+ * @category    Itactica
+ * @package     Itactica_ProductLabel
+ * @copyright   Copyright (c) 2014-2016 Itactica (https://www.getintenso.com)
+ * @license     https://getintenso.com/license
+ */
+-->
+<config>
+    <modules>
+        <Itactica_ProductLabel>
+            <version>1.0.0</version>
+        </Itactica_ProductLabel>
+    </modules>
+    <global>
+        <resources>
+            <itactica_productlabel_setup>
+                <setup>
+                    <module>Itactica_ProductLabel</module>
+                    <class>Itactica_ProductLabel_Model_Resource_Setup</class>
+                </setup>
+            </itactica_productlabel_setup>
+        </resources>
+        <blocks>
+            <itactica_productlabel>
+                <class>Itactica_ProductLabel_Block</class>
+            </itactica_productlabel>
+        </blocks>
+        <helpers>
+            <itactica_productlabel>
+                <class>Itactica_ProductLabel_Helper</class>
+            </itactica_productlabel>
+        </helpers>
+        <models>
+            <itactica_productlabel>
+                <class>Itactica_ProductLabel_Model</class>
+                <resourceModel>itactica_productlabel_resource</resourceModel>
+            </itactica_productlabel>
+            <itactica_productlabel_resource>
+                <class>Itactica_ProductLabel_Model_Resource</class>
+                <entities>
+                    <label>
+                        <table>itactica_productlabel_label</table>
+                    </label>
+                    <rule_product>
+                        <table>itactica_productlabel_rule_product</table>
+                    </rule_product>
+                </entities>
+            </itactica_productlabel_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <itactica_productlabel>
+                    <file>itactica_productlabel.xml</file>
+                </itactica_productlabel>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Itactica_Productlabel>
+                    <files>
+                        <default>Itactica_ProductLabel.csv</default>
+                    </files>
+                </Itactica_Productlabel>
+            </modules>
+        </translate>
+        <global_search>
+            <label>
+                <class>itactica_productlabel/adminhtml_search_label</class>
+                <acl>itactica_productlabel</acl>
+            </label>
+        </global_search>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Itactica_ProductLabel before="Mage_Adminhtml">Itactica_ProductLabel_Adminhtml</Itactica_ProductLabel>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+        <routers>
+            <itactica_productlabel>
+                <use>standard</use>
+                <args>
+                    <module>Itactica_ProductLabel</module>
+                    <frontName>itactica-productlabel</frontName>
+                </args>
+            </itactica_productlabel>
+        </routers>
+        <layout>
+            <updates>
+                <itactica_productlabel>
+                    <file>itactica_productlabel.xml</file>
+                </itactica_productlabel>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Itactica_ProductLabel>
+                    <files>
+                        <default>Itactica_ProductLabel.csv</default>
+                    </files>
+                </Itactica_ProductLabel>
+            </modules>
+        </translate>
+    </frontend>
+    <crontab>
+        <jobs>
+            <productlabel>
+                <schedule>
+                    <cron_expr>*/5 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>itactica_productlabel/observer::applyRules</model>
+                </run>
+            </productlabel>
+        </jobs>
+    </crontab>
+</config>
